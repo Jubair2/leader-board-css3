@@ -77,13 +77,20 @@ hr{
     color: blue;
 }
 /* courses-styles */
-.course .course-banner img{
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+ .course .course-banner img{
     width: 224px;
     height: 104px;
 
 }
 .course-info{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .fa-star{
     font-size: 12px;
@@ -93,4 +100,20 @@ hr{
 }
 .fa-star.empty{
     color: gray;
+}
+
+.course-duration{
+    background-color: hotpink;
+    border-radius: 15px;
+    color: green;
+}
+/* Media quaries */
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    .players{
+        background-color: red;
+    }
+    .player{
+        flex-direction: column;
+    }
 }
